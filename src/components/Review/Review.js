@@ -17,7 +17,7 @@ const Review = () => {
     }
 
     const handleReviewSubmit = e => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/addReview', {
+        fetch('https://store-backend-gsi8.onrender.com/addReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

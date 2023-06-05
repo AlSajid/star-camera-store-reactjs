@@ -13,7 +13,7 @@ const AddAProduct = () => {
     }
 
     const handleReviewSubmit = e => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/addAProduct', {
+        fetch('https://store-backend-gsi8.onrender.com/addAProduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

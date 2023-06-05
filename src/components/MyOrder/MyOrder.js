@@ -6,7 +6,7 @@ const MyOrder = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`https://fierce-mesa-00135.herokuapp.com/myOrder/${user.email}`)
+        fetch(`https://store-backend-gsi8.onrender.com/myOrder/${user.email}`)
             .then(response => response.json())
             .then(data => setMyOrders(data));
 
@@ -16,7 +16,7 @@ const MyOrder = () => {
         const proceed = window.confirm('Are you sure?');
 
         if (proceed) {
-            const url = `https://fierce-mesa-00135.herokuapp.com/deleteOrder/${id}`;
+            const url = `https://store-backend-gsi8.onrender.com/deleteOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

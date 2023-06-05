@@ -9,7 +9,7 @@ const Purchase = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`https://fierce-mesa-00135.herokuapp.com/products/${id}`)
+        fetch(`https://store-backend-gsi8.onrender.com/products/${id}`)
             .then(response => response.json())
             .then(data => setProducts(data));
 
@@ -30,7 +30,7 @@ const Purchase = () => {
         order["status"] = "Pending";
     }
     const handleOrderSubmit = e => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/addOrder', {
+        fetch('https://store-backend-gsi8.onrender.com/addOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

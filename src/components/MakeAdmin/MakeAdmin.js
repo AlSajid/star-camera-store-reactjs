@@ -19,7 +19,7 @@ const MakeAdmin = () => {
     }
 
     const handleReviewSubmit = e => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/addAdmin', {
+        fetch('https://store-backend-gsi8.onrender.com/addAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

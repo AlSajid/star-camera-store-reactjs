@@ -6,14 +6,14 @@ const ManageAllOrders = () => {
     let change = 0;
 
     useEffect(() => {
-        fetch(`https://fierce-mesa-00135.herokuapp.com/allOrder`)
+        fetch(`https://store-backend-gsi8.onrender.com/allOrder`)
             .then(response => response.json())
             .then(data => setAllOrders(data));
 
     }, []);
 
     const handleShipOrder = id => {
-        const url = `https://fierce-mesa-00135.herokuapp.com/shipOrder/${id}`;
+        const url = `https://store-backend-gsi8.onrender.com/shipOrder/${id}`;
 
         fetch(url, {
             method: 'PUT',
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
         const proceed = window.confirm('Are you sure?');
 
         if (proceed) {
-            const url = `https://fierce-mesa-00135.herokuapp.com/deleteOrder/${id}`;
+            const url = `https://store-backend-gsi8.onrender.com/deleteOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

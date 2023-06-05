@@ -4,7 +4,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/products')
+        fetch('https://store-backend-gsi8.onrender.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
 
@@ -14,7 +14,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure?');
 
         if (proceed) {
-            const url = `https://fierce-mesa-00135.herokuapp.com/deleteProduct/${id}`;
+            const url = `https://store-backend-gsi8.onrender.com/deleteProduct/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'

@@ -5,7 +5,7 @@ const Products = (props) => {
     const [allproducts, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://fierce-mesa-00135.herokuapp.com/products')
+        fetch('https://store-backend-gsi8.onrender.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
 

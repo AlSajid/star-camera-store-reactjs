@@ -83,7 +83,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, password, method) => {
         const user = { email, displayName, password };
-        fetch('https://fierce-mesa-00135.herokuapp.com/users', {
+        fetch('https://store-backend-gsi8.onrender.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -96,7 +96,7 @@ const useFirebase = () => {
     const [admin, setAdmin] = useState([]);
 
     useEffect(() => {
-        fetch(`https://fierce-mesa-00135.herokuapp.com/admin/${user.email}`)
+        fetch(`https://store-backend-gsi8.onrender.com/admin/${user.email}`)
             .then(response => response.json())
             .then(data => setAdmin(data[0]?._id));
 
